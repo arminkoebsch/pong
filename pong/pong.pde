@@ -11,21 +11,32 @@ final int options = 4;
 
 //entity variables
 float ly, ry, ld, rd;//paddles
-float bx, by, bd;//ball
+float bx, by, bd, vx, vy;//ball
+
+//keyboard variables
+boolean wkey = false;
+boolean skey = false;
+boolean upkey = false;
+boolean downkey = false;
+
+
 
 
 
 void setup(){
-  size(1000, 1000);
-  mode = intro;
+  size(1500, 1000);
+  mode = game;
   
   ly = 500;
   ry = 500;
   ld = 100;
   rd = 100;
-  bx = 500;
+  bx = width/2;
   by = 500;
   bd = 10;
+  vx = -10;
+  vy = 2;
+
 }
 
 
