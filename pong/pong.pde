@@ -3,6 +3,10 @@
 //mode Framework
 int mode;
 
+int leftScore = 0;
+int rightScore = 0;
+int timer = 100;
+
 final int intro = 0;
 final int game = 1;
 final int pause = 2;
@@ -24,6 +28,7 @@ boolean downkey = false;
 
 
 void setup(){
+  textMode(CENTER);
   size(1500, 1000);
   mode = game;
   
