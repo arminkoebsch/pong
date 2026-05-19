@@ -20,8 +20,21 @@ void game() {
   //paddles move
   if (wkey == true && ly > 0+ld/2) ly = ly - 5;
   if (skey == true && ly < height-rd/2) ly = ly + 5;
-  if (upkey == true && ry > 0+rd/2) ry = ry - 5;
-  if (downkey == true && ry < height-rd/2) ry = ry + 5;
+
+  if (AI == false) {
+    if (upkey == true && ry > 0+rd/2) ry = ry - 5;
+    if (downkey == true && ry < height-rd/2) ry = ry + 5;
+  } else {
+    //ry = by;//impossible difficulty
+
+    if (vx > 0) {
+      if (ry + 5 > by && ry > 0+rd/2) ry = ry - 5;
+      if (ry - 5 < by && ry < height-rd/2) ry = ry + 5;
+    }else{
+      if (ry > 500) ry = ry - 5;
+      if (ry < 500) ry = ry + 5;
+    }
+  }
 
   //ball move
   if (timer < 0) {
@@ -35,17 +48,19 @@ void game() {
     bx = width/2;
     by = height/2;
     timer = 50;
+    vy = 0;
   }
-  
+
   if (bx > width) {
     leftScore++;
     bx = width/2;
     by = height/2;
     timer = 50;
+    vy = 0;
   }
-  
+
   //winning
-  if (leftScore > 6 || rightScore > 6){
+  if (leftScore > 6 || rightScore > 6) {
     mode = gameover;
   }
 

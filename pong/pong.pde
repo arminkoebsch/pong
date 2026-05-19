@@ -23,6 +23,8 @@ boolean skey = false;
 boolean upkey = false;
 boolean downkey = false;
 
+boolean AI;
+
 
 
 
@@ -30,7 +32,7 @@ boolean downkey = false;
 void setup(){
   textMode(CENTER);
   size(1500, 1000);
-  mode = game;
+  mode = intro;
   
   ly = 500;
   ry = 500;
