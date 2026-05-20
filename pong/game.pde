@@ -27,7 +27,7 @@ void game() {
   } else {
     //ry = by;//impossible difficulty
 
-    if (vx > 0) {
+    if (vx > 0 && bx > 750) {
       if (ry + 5 > by && ry > 0+rd/2) ry = ry - 5;
       if (ry - 5 < by && ry < height-rd/2) ry = ry + 5;
     }else{

@@ -43,11 +43,13 @@ void setup(){
   bd = 10;
   vx = -10;
   vy = 2;
+ 
 
 }
 
 
 void draw(){
+  
   
   if (mode == intro){
     intro();
