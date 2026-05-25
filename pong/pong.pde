@@ -1,4 +1,21 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+
+Minim minim;
+
+AudioPlayer theme;
 
 //mode Framework
 int mode;
@@ -44,7 +61,9 @@ void setup(){
   vx = -10;
   vy = 2;
  
-
+  
+  minim = new Minim(this);
+  theme = minim.loadFile("Theme.mp3");
 }
 
 

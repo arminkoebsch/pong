@@ -1,4 +1,6 @@
 void game() {
+  
+  theme.play();
 
   fill(150, 50);
   rect(0, 0, width, height);
